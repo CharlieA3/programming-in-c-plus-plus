@@ -1,0 +1,460 @@
+{
+    "suites": [
+	{
+	    "name": "constructDestruct",
+	    "program": "wordarray_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+		    	"a new-size 0",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-size 10",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-size 19",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string this is a test",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string ",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string test",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string this  is   a    test",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string this is a test   ",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string     this is a test",
+			"a meta",
+			"a delete"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string this is a test",
+			"b new-size 4",
+			"a meta",
+			"b meta",
+			"a delete",
+			"b delete"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "print",
+	    "program": "wordarray_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"a new-string this is a test",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string  this   is   a   test of spaces ",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-size 5",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string ab cd",
+			"b new-string ef gh ij",
+			"a print",
+			"a meta",
+			"b print",
+			"b meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-size 4",
+			"b new-size 3",
+			"a print",
+			"a meta",
+			"b print",
+			"b meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string ab cd",
+			"b new-size 3",
+			"a print",
+			"a meta",
+			"b print",
+			"b meta"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "findFirst",
+	    "program": "wordarray_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"a new-size 3",
+			"a findFirst hello"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello world",
+			"a findFirst hello"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello there world",
+			"a findFirst there"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello world",
+			"a findFirst world"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello world",
+			"b new-string abc def",
+			"a findFirst def"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello world",
+			"b new-string abc def",
+			"b findFirst def"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "removeAll",
+	    "program": "wordarray_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"a new-string hello world test",
+			"a removeAll abc",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello world test",
+			"a removeAll hello",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello world test",
+			"a removeAll world",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello world test",
+			"a removeAll test",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string test hello test world test",
+			"a removeAll test",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string test test test test test",
+			"a removeAll test",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string a ab abc abcd abcde",
+			"a removeAll abc",
+			"a print",
+			"a meta",
+			"a removeAll ab",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string a x b x c",
+			"a removeAll x",
+			"a print",
+			"a meta",
+			"a removeAll a",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string 1 2 3",
+			"b new-string 1 2 3",
+			"a removeAll 2",
+			"a print",
+			"a meta",
+			"b print",
+			"b meta"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "append",
+	    "program": "wordarray_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+		        "a new-string 1 2 3",
+		        "b new-size 0",
+		        "a append b",
+		        "a print",
+		        "a meta",
+		        "b print",
+		        "b meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-size 0",
+		        "b new-string 1 2 3",
+		        "a append b",
+		        "a print",
+		        "a meta",
+		        "b print",
+		        "b meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-size 2",
+		        "b new-string 1 2 3",
+		        "a append b",
+		        "a print",
+		        "a meta",
+		        "b print",
+		        "b meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-size 3",
+		        "b new-string 1 2 3",
+		        "a append b",
+		        "a print",
+		        "a meta",
+		        "b print",
+		        "b meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-size 5",
+		        "b new-string 1 2 3",
+		        "a append b",
+		        "a print",
+		        "a meta",
+		        "b print",
+		        "b meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-string 1 2 3",
+		        "b new-string 1 2 3",
+		        "a append b",
+		        "a print",
+		        "a meta",
+		        "b print",
+		        "b meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-string 1 2 3",
+		        "a append a",
+		        "a print",
+		        "a meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-size 9",
+			"b new-string 1 2 3",
+		        "a append b",
+		        "b append a",
+		        "a print",
+		        "a meta",
+		        "b print",
+		        "b meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-size 9",
+			"b new-string 1 2 3",
+		        "a append b",
+		        "a append a",
+		        "a print",
+		        "a meta",
+		        "b print",
+		        "b meta"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "additional",
+	    "program": "wordarray_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+		        "a new-string hello world",
+			"b new-string bc def",
+			"a append b",
+			"a findFirst def"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-string hello world",
+			"b new-string bc def",
+			"a append b",
+			"a findFirst hello"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string 1 2 3",
+			"b new-string 1 2 3",
+			"a append b",
+			"a removeAll 2",
+			"a print",
+			"a meta",
+			"b print",
+			"b meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string 2 2",
+			"b new-string 2 2 2",
+			"a append b",
+			"a removeAll 2",
+			"a print",
+			"a meta",
+			"b print",
+			"b meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-string hello world",
+			"b new-string bc def ghij 1 23 456",
+			"a append b",
+			"b delete",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+			"a new-size 2",
+			"b new-string 1 2 3 4 5",
+			"a append b",
+			"b delete",
+			"a print",
+			"a meta"
+		    ]
+		},
+		{
+		    "input": [
+		        "a new-string 54321 321 1",
+		        "a findFirst 321",
+		        "a removeAll 321",
+		        "a findFirst 321"
+		    ]
+		}
+	    ]
+	}
+    ]
+}
