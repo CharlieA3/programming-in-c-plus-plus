@@ -1,0 +1,619 @@
+{
+    "suites": [
+	{
+	    "name": "strncpy",
+	    "program": "cstringlib_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"strncpy ",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy short",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 000zero000",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy space space",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy   space  space  ",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+		        "strncpy 1234567890123456789",
+		        "printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 12345678901234567890",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 123456789012345678901",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 1234567890123456789012",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy this string is too long to fit in the buffer.",
+			"printall"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "strlen",
+	    "program": "cstringlib_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"strlen"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy short",
+			"strlen"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 000zero000",
+			"strlen"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy space space",
+			"strlen"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy   space  space  ",
+			"strlen"
+		    ]
+		},
+		{
+		    "input": [
+		        "strncpy 1234567890123456789",
+		        "strlen"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 12345678901234567890",
+			"strlen"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 123456789012345678901",
+			"strlen"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 1234567890123456789012",
+			"strlen"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy this string is too long to fit in the buffer.",
+			"strlen"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "strncat",
+	    "program": "cstringlib_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"strncat ",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncat hello",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+		        "strncat  1",
+		        "strncat  2 3 ",
+		        "printall"
+		    ]
+		},
+		{
+		    "input": [
+		        "strncat 1234567890",
+		        "strncat 123456789",
+		        "printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncat 1234567890",
+			"strncat 1234567890",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncat 1234567890",
+			"strncat 12345678901",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncat this fits.",
+			"printall",
+			"strncat  this makes the string too long.",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 1",
+			"strncat 23",
+			"strncat 456",
+			"strncat 7890",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 1234567890",
+			"strncat 1234567890",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 1234567890",
+			"strncat 12345678901",
+			"printall"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "strcmp",
+	    "program": "cstringlib_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+		        "strncpy xyz",
+		        "strcmp xyz"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy xyz",
+			"strcmp abc"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy xy",
+			"strcmp abc"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy xyzw",
+			"strcmp abc"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strcmp xyz"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy ab",
+			"strcmp xyz"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abcd",
+			"strcmp xyz"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 000",
+			"strcmp 001"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 001",
+			"strcmp 000"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 00",
+			"strcmp 000"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy 000",
+			"strcmp 00"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "strchr",
+	    "program": "cstringlib_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"strchr x"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy X",
+			"strchr x"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strchr a"
+		    ]
+		},
+		{
+		    "input": [
+		        "strncpy abc",
+		        "strchr b"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strchr c"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strchr x"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy aabbcc",
+			"strchr a"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy aabbcc",
+			"strchr b"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy aabbcc",
+			"strchr c"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy aabbcc",
+			"strchr x"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "strrchr",
+	    "program": "cstringlib_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"strrchr x"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy X",
+			"strrchr x"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strrchr a"
+		    ]
+		},
+		{
+		    "input": [
+		        "strncpy abc",
+		        "strrchr b"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strrchr c"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strrchr x"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy aabbcc",
+			"strrchr a"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy aabbcc",
+			"strrchr b"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy aabbcc",
+			"strrchr c"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy aabbcc",
+			"strrchr x"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "strstr",
+	    "program": "cstringlib_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"strstr x"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abcd",
+			"strstr x"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abcd",
+			"strstr xyz"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abcd",
+			"strstr xyzxyz"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abcd",
+			"strstr ab"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abcd",
+			"strstr bc"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abcd",
+			"strstr cd"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strstr a"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strstr b"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc",
+			"strstr c"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "strtok",
+	    "program": "cstringlib_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+		        "strtok-str ,",
+		        "printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy ,;,;",
+		        "strtok-str ,;",
+		        "printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc123",
+			"printall",
+			"strtok-str ,",
+			"printall",
+			"strtok-null ,",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc,123",
+			"printall",
+			"strtok-str ,",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc,123",
+			"printall",
+			"strtok-str ,",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc,123",
+			"printall",
+			"strtok-str ,",
+			"printall",
+			"strtok-null ,",
+			"printall",
+			"strtok-null ,",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc;123",
+			"printall",
+			"strtok-str ,;",
+			"printall",
+			"strtok-null ,;",
+			"printall",
+			"strtok-null ,;",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc,123,xyz",
+			"printall",
+			"strtok-str ,",
+			"printall",
+			"strtok-null ,",
+			"printall",
+			"strtok-null ,",
+			"printall",
+			"strtok-null ,",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc;123,xyz",
+			"printall",
+			"strtok-str ,;",
+			"printall",
+			"strtok-null ,;",
+			"printall",
+			"strtok-null ,;",
+			"printall",
+			"strtok-null ,;",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy abc;;123,,xyz",
+			"printall",
+			"strtok-str ,;",
+			"printall",
+			"strtok-null ,;",
+			"printall",
+			"strtok-null ,;",
+			"printall",
+			"strtok-null ,;",
+			"printall"
+		    ]
+		},
+		{
+		    "input": [
+			"strncpy ;;,abc;,123;,;xyz,,",
+			"printall",
+			"strtok-str ;",
+			"printall",
+			"strtok-null ,",
+			"printall",
+			"strtok-null ;",
+			"printall",
+			"strtok-null ,",
+			"printall"
+		    ]
+		}
+	    ]
+	}
+    ]
+}
