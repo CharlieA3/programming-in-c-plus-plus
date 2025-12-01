@@ -1,0 +1,44 @@
+-- In the WordArray constructor that takes a charater array as an argument, how did you split the string into words?
+I used strtok. I knew since this modified the original string I needed a copy. I would use strtok to count words and used the other copy of 
+the const char* to get each token and add it to the m_array.
+
+
+-- How did you append the words from one array onto another?
+I checked if I needed to reallocate, then copied from the m_array of this class and the src depending on the indexing. Then since I used 
+new to create a temporary dynamic array, I had to delete it and everything in it. I then set everything in this class to the array i populated
+and the max words and number of words. If I did not need to reallocate (or the original could hold everything), I just looped through duplicating the
+words and updating the number of words it was holding.
+
+
+-- Did you find valgrind useful on this assignment?
+yes, I ran into a lot of seg faults or invalid reads/writes becaause of faulty logic which I used valgrind to help me with
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+class resources
+
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+no
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+
+
+
+
+-- About how many hours did it take you to complete this assignment?
+7
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?
