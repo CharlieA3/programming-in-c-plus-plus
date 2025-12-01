@@ -1,0 +1,41 @@
+-- What kinds of pointers did you use in the typedefs and why?
+
+
+
+-- Why do you think the copy and move members are deleted?
+
+
+
+-- Did you find valgrind useful on this assignment?
+
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+
+
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+
+
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+
+
+
+
+-- About how many hours did it take you to complete this assignment?
+
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?
