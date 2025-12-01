@@ -1,0 +1,235 @@
+{
+    "suites": [
+	{
+	    "name": "print",
+	    "program": "pathfinding_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"print 1"
+		    ]
+		},
+		{
+		    "input": [
+			"print 2"
+		    ]
+		},
+		{
+		    "input": [
+			"print 19"
+		    ]
+		},
+		{
+		    "input": [
+			"print 27"
+		    ]
+		},
+		{
+		    "input": [
+			"print 38"
+		    ]
+		},
+		{
+		    "input": [
+			"print 42"
+		    ]
+		},
+		{
+		    "input": [
+			"print 46"
+		    ]
+		},
+		{
+		    "input": [
+			"print 71"
+		    ]
+		},
+		{
+		    "input": [
+			"print 80"
+		    ]
+		},
+		{
+		    "input": [
+			"print 99"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "neighbors",
+	    "program": "pathfinding_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"neighbors 1"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 2"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 19"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 27"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 38"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 42"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 46"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 71"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 80"
+		    ]
+		},
+		{
+		    "input": [
+			"neighbors 99"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "bfs",
+	    "program": "pathfinding_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"bfs-summary 1"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 2"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 19"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 27"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 38"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 42"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 46"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 71"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 80"
+		    ]
+		},
+		{
+		    "input": [
+			"bfs-summary 99"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "astar",
+	    "program": "pathfinding_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"astar-summary 1"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 2"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 19"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 27"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 38"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 42"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 46"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 71"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 80"
+		    ]
+		},
+		{
+		    "input": [
+			"astar-summary 99"
+		    ]
+		}
+	    ]
+	}
+    ]
+}
