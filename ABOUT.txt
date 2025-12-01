@@ -1,0 +1,42 @@
+-- What did you think of the Red Blob pathfinding tutorial?
+It was really helpful to visualize the algorithms using the animations because it made it easy
+to understand the order of operations.
+
+
+-- Why did we need to define operator< for Point and PriorityPoint?
+to order points properly we used the <operator for points
+To make it a min heap instead of a max heap for priority point.
+
+
+-- Which did you prefer implementing, BFS or A*, and why?
+I liked BFS because it is simple, A* kinda got confusing and it doesn't seem that much better than BFS. If I were making a game though,
+I probably would give different AI different pathfinding algorithms to make things interesting.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+class notes and such
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+no
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+n/a
+
+
+
+-- About how many hours did it take you to complete this assignment?
+6
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?
