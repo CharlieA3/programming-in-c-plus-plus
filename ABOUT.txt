@@ -1,0 +1,45 @@
+-- How did you handle strings that are not the same length in strcmp?
+I knew that I could use a while loop to get to the point where one or both strings reached the null termination byte. Once that was reached, I could just check the indices using the size_t variable
+I made to see if the index that was stopped at was the same for both, or I could just compare them to see if one of the strings terminated and the other didn't. If there was a string that was longer,
+it would have a larger value so comparing them would return the correct value;
+
+
+-- How did you search from the end of the string in strrchr?
+I initially did it in a way that started at the front of the string and just found the last instance of the character if there was one, but I changed it to increment a size until null byte was reached,
+then looped backwards looking for the character.
+
+
+-- How did you look for a substring in strstr?
+I had a while loop that would increment the index, check if the first index of string 2 was equal to the current index, if so, then loop through the length of that string (if we can) to see if that actually matched.
+If it did not match, move one.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no
+
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+no
+
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+
+
+
+
+-- About how many hours did it take you to complete this assignment?
+4
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?
