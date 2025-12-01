@@ -1,0 +1,9 @@
+Fox
+Bat
+Armadillo
+Squirrel
+Lion
+Seal
+Dog
+Whale
+Moose

@@ -1,0 +1,5 @@
+# rainbow colors
+red orange yellow green blue indigo violet
+
+# more colors
+purple orange pink brown

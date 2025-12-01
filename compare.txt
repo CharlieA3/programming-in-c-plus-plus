@@ -1,0 +1,14 @@
+What have you observed about the performance of various STL collections?
+number of operations without optimization was lot lower for the vector. 
+
+How does this change when you enable compiler optimizations?
+
+
+(For both questions, justfy your answer using output from callgrind)
+
+1st runs:
+primes_small calls: 220044634
+    use map percentage: 3.98%
+    use vector percentage: 2.47%
+    ues list percentage: 3.37%
+primes_large calls: 

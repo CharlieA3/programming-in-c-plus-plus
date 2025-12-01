@@ -1,0 +1,42 @@
+-- How different were the implementations for different collection types?
+Since Vector and List have similar function and different under the hood operations, those function were the same. The one
+that was different was map because it has a different structure and a different method of traversal so that had to be used. 
+Since it was different you can use the iterator in a different way.
+
+
+-- Why do you think compare_main should search for a word not in the collection?
+To test all the lines of code.
+
+
+-- Do you prefer C++20 or C++98?  Why?
+C++98 I think is a little more revealing with how things work so as long as you know how to read C++ it is not that bad but more informative.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+course slides and example code
+
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+no
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+
+
+
+
+-- About how many hours did it take you to complete this assignment?
+5.5
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?
