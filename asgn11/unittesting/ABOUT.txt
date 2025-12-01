@@ -1,0 +1,43 @@
+-- Have you used other unit testing frameworks before?  If so, how does CxxTest compare?
+I ahve used pytest before and its annoying. I like CxxTest better, it just feels simpler. I think C++ is my favorite language because
+of how versatile it is. Testing is simple, but to go on a tangent I, I could use it for so many different things like games, embedded systems
+optimization engineering at a trading firm, writing hardware emulators for new computer architecture, etc. Anything cool really.
+
+
+-- Were there any functions that you found difficult to test? How did you get coverage for them?
+The assignment copy and move operations were difficult to test at first because I wasn't understanding how lines were missing.
+I realized that I wasn't systemcatically thinking through each function to make sure every possible condition was met. Once I asked
+myself if each line would be ran from my code, it was pretty much the same difficultly for each case and function. The copy and move 
+assignment still had the most extra lines that I had to add when I realized it wasn't fully covered.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+Class resources.
+
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+no
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+n/a
+
+
+
+-- About how many hours did it take you to complete this assignment?
+8
+
+
+-- (Optional) What was your favorite part of the assignment?
+Learning how to actually write test suites. I will keep this code for me as a template for how to set up testing suites because 
+any job will probably want me to know how to write tests.
+
+
+-- (Optional) How would you improve the assignment?
+I think it is good.

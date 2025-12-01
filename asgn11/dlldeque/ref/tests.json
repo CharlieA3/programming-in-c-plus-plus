@@ -1,0 +1,132 @@
+{
+    "suites": [
+	{
+	    "name": "push",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "program": "TEST_push_1i"
+		},
+		{
+		    "program": "TEST_push_1s"
+		},
+		{
+		    "program": "TEST_push_2i"
+		},
+		{
+		    "program": "TEST_push_2s"
+		},
+		{
+		    "program": "TEST_push_3i"
+		},
+		{
+		    "program": "TEST_push_3s"
+		},
+		{
+		    "program": "TEST_push_4i"
+		},
+		{
+		    "program": "TEST_push_4s"
+		},
+		{
+		    "program": "TEST_push_5i"
+		},
+		{
+		    "program": "TEST_push_5s"
+		},
+		{
+		    "program": "TEST_push_6i"
+		},
+		{
+		    "program": "TEST_push_6s"
+		}
+	    ]
+	},
+
+	{
+	    "name": "pop",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "program": "TEST_pop_1i"
+		},
+		{
+		    "program": "TEST_pop_1s"
+		},
+		{
+		    "program": "TEST_pop_2i"
+		},
+		{
+		    "program": "TEST_pop_2s"
+		},
+		{
+		    "program": "TEST_pop_3i"
+		},
+		{
+		    "program": "TEST_pop_3s"
+		},
+		{
+		    "program": "TEST_pop_4i"
+		},
+		{
+		    "program": "TEST_pop_4s"
+		},
+		{
+		    "program": "TEST_pop_5i"
+		},
+		{
+		    "program": "TEST_pop_5s"
+		},
+		{
+		    "program": "TEST_pop_6i"
+		},
+		{
+		    "program": "TEST_pop_6s"
+		}
+	    ]
+	},
+
+	{
+	    "name": "iterators",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "program": "TEST_iter_loop_i"
+		},
+		{
+		    "program": "TEST_iter_loop_s"
+		},
+		{
+		    "program": "TEST_iter_find_i"
+		},
+		{
+		    "program": "TEST_iter_find_s"
+		},
+		{
+		    "program": "TEST_iter_for_each_i"
+		},
+		{
+		    "program": "TEST_iter_for_each_s"
+		},
+		{
+		    "program": "TEST_iter_range_for_i"
+		},
+		{
+		    "program": "TEST_iter_range_for_s"
+		},
+		{
+		    "program": "TEST_iter_pre_i"
+		},
+		{
+		    "program": "TEST_iter_pre_s"
+		},
+		{
+		    "program": "TEST_iter_post_i"
+		},
+		{
+		    "program": "TEST_iter_post_s"
+		}
+	    ]
+	}
+    ]
+}
