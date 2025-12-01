@@ -1,0 +1,56 @@
+TEST_Vector2D_assign
+TEST_Vector2D_ctor_copy
+TEST_Vector2D_ctor_default
+TEST_Vector2D_ctor_elementwise
+TEST_Vector2D_element_access
+TEST_Vector2D_element_get
+TEST_Vector2D_element_set
+TEST_Vector2D_oper_addition
+TEST_Vector2D_oper_division
+TEST_Vector2D_oper_equality
+TEST_Vector2D_oper_multiplication
+TEST_Vector2D_oper_negate
+TEST_Vector2D_oper_subtraction
+TEST_Shapes_circle_create
+TEST_Shapes_circle_display
+TEST_Shapes_circle_translate
+TEST_Shapes_circle_destroy
+TEST_Shapes_triangle_create
+TEST_Shapes_triangle_display
+TEST_Shapes_triangle_translate
+TEST_Shapes_triangle_destroy
+test.log
+.vscode/settings.json
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

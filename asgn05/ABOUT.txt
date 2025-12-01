@@ -1,0 +1,47 @@
+-- How did you make the Shape class abstract?
+I made the contructor and destructors empty, and made the destructor and the other member function besides the constructor
+virtual or pure virtual. Making a class with pure virtual functions basically doesn't allow it to be instantiated becasue the functions 
+aren't implemented. When you implement them for derived classes, it will not allow you to instantiate that object until all the pure virtual
+member functions are implemented as well.
+
+
+-- What was different about the functions you implemented for the [] operator on Vector2D?
+I used the throw keyword to throw an out of range exception if the index's given were out of the range we wanted. They 
+were also the only functions that took in integers for the Vector2D class.
+
+
+-- How did you pass arguments into the stream operator functions?
+I passed in a reference to an output stream becasue I assumed you would want to modify a more global output stream that is being used
+by your program and might be used by other functions. I also passed in a const Vector2D reference because I wanted to avoid the overhead
+of copying a variable for the scope of the function, but I also wanted to guarantee that the vector would not be modified and 
+read from only.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+I used lecture notes and excercises on the overrides and the class material.
+
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+I did not.
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+n/a
+
+
+
+-- About how many hours did it take you to complete this assignment?
+3.5
+
+
+-- (Optional) What was your favorite part of the assignment?
+learning the ambiguities of implementing all the overrides and the abstract class. So basically the whole thing, I feel like I learned a lot.
+
+
+-- (Optional) How would you improve the assignment?

@@ -1,0 +1,83 @@
+{
+    "suites": [
+	{
+	    "name": "vector2d",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "program": "TEST_Vector2D_assign"
+		},
+		{
+		    "program": "TEST_Vector2D_ctor_copy"
+		},
+		{
+		    "program": "TEST_Vector2D_ctor_default"
+		},
+		{
+		    "program": "TEST_Vector2D_ctor_elementwise"
+		},
+		{
+		    "program": "TEST_Vector2D_element_access"
+		},
+		{
+		    "program": "TEST_Vector2D_element_get"
+		},
+		{
+		    "program": "TEST_Vector2D_element_set"
+		},
+		{
+		    "program": "TEST_Vector2D_oper_addition"
+		},
+		{
+		    "program": "TEST_Vector2D_oper_division"
+		},
+		{
+		    "program": "TEST_Vector2D_oper_equality"
+		},
+		{
+		    "program": "TEST_Vector2D_oper_multiplication"
+		},
+		{
+		    "program": "TEST_Vector2D_oper_negate"
+		},
+		{
+		    "program": "TEST_Vector2D_oper_subtraction"
+		}
+	    ]
+	},
+
+	{
+	    "name": "shapes",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "program": "TEST_Shapes_shape_abstract"
+		},
+		{
+		    "program": "TEST_Shapes_circle_create"
+		},
+		{
+		    "program": "TEST_Shapes_circle_display"
+		},
+		{
+		    "program": "TEST_Shapes_circle_translate"
+		},
+		{
+		    "program": "TEST_Shapes_circle_destroy"
+		},
+		{
+		    "program": "TEST_Shapes_triangle_create"
+		},
+		{
+		    "program": "TEST_Shapes_triangle_display"
+		},
+		{
+		    "program": "TEST_Shapes_triangle_translate"
+		},
+		{
+		    "program": "TEST_Shapes_triangle_destroy"
+		}
+	    ]
+	}
+    ]
+}
