@@ -1,0 +1,9 @@
+orange
+brown
+fox
+dog
+
+ORANGE
+BROWN
+FOX
+DOG

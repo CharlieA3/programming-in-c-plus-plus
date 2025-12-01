@@ -1,0 +1,4 @@
+#                       Modified to be the first 10 primes
+#        For more information on primes see http://primes.utm.edu/
+#
+      2      3      5      7     11     13     17     19     23     29 

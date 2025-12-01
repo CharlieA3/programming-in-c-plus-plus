@@ -1,0 +1,220 @@
+{
+    "suites": [
+	{
+	    "name": "print",
+	    "program": "doc_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"print color"
+		    ]
+		},
+		{
+		    "input": [
+			"print fruit"
+		    ]
+		},
+		{
+		    "input": [
+			"print test"
+		    ]
+		},
+		{
+		    "input": [
+			"print mammal"
+		    ]
+		},
+		{
+		    "input": [
+			"print duplicate"
+		    ]
+		},
+		{
+		    "input": [
+			"print missing"
+		    ]
+		},
+		{
+		    "input": [
+			"print none"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "vectorcollection",
+	    "program": "doc_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"lookup-v quick"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v pineapple"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v seal"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v pink"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v QUICK"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v rainbow"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v fruit"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v xyz"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v orange"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-v fox"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "listcollection",
+	    "program": "doc_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"lookup-l quick"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l pineapple"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l seal"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l pink"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l QUICK"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l rainbow"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l fruit"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l xyz"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l orange"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-l fox"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "mapcollection",
+	    "program": "doc_main",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+			"lookup-m quick"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m pineapple"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m seal"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m pink"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m QUICK"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m rainbow"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m fruit"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m xyz"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m orange"
+		    ]
+		},
+		{
+		    "input": [
+			"lookup-m fox"
+		    ]
+		}
+	    ]
+	}
+    ]
+}
