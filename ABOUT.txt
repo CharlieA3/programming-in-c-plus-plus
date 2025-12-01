@@ -1,0 +1,43 @@
+-- What type of exceptions did you throw and why?
+I used runtime excpetions because I thought that would be most applicable. All of the errors occur during runtime
+from a misinput form a file or not reading the file or a incorrectly configured world.
+
+
+-- Why does this assignment use getline rather than operator >>?
+It uses getline because we need to read the entire line including spaces. The >> operator would stop at whitespace
+
+
+-- How did you check for a win or lose?
+I checked if any of the robots were in the same position as the player, if so the player loses. I checked if there were no robots or only one debris
+and if so the player wins. If neither of those the player is still playing 
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+lecture notes and slides and videos
+
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+none
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+
+n/a
+
+
+
+-- About how many hours did it take you to complete this assignment?
+5
+
+
+-- (Optional) What was your favorite part of the assignment?
+I like programming small games
+
+
+-- (Optional) How would you improve the assignment?
