@@ -1,0 +1,44 @@
+-- How did you check for input errors when reading in board size and moves?
+I check if the cin operation failed, and if so I error_exit. I used !(cin >> board_size)
+
+
+-- Was there any impact of making Board::size unsigned? Do you think it would be better if it were signed or not?
+I think it would be better if it was signed. Since we are only useing positive numbers anyway it should have still worked. I found it
+tedious to figure out how to compare integers in my loops with the unsigned integer, so I instead used size_t. Having it be unsigned makes it
+so I have to cast it to an int to compare.
+
+
+-- Describe your approach to checking if a player has won.
+I felt like I did a roundabout approach. I did for each row, check the row and the column with nested loops. I used ternary operators
+to shorten the number of lines I had to use. I set a flag to true, which if there was a blank in the space, it would skip over. If it stayed true, I 
+knew that this was correct so I would return the X or O status depending what the starting space was thatI was checking. I could do this because I checked if 
+the one next to it was equal or if there was a blank, since there wasn't and the flag remained true, I could reuturn. I did the same for checking the diagonal edge
+cases.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+I used lecture notes and slides
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+no
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+
+
+
+-- About how many hours did it take you to complete this assignment?
+3
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?
