@@ -1,0 +1,339 @@
+{
+    "suites": [
+	{
+	    "name": "fizzbuzz",
+	    "program": "fizzbuzz",
+	    "valgrind": true,
+	    "cases": [
+		{
+		    "input": [
+		    ]
+		},
+		{
+		    "input": [
+			"2 0"
+		    ]
+		},
+		{
+		    "input": [
+			"0 2"
+		    ]
+		},
+		{
+		    "input": [
+			"2",
+			"10"
+		    ]
+		},
+		{
+		    "input": [
+			"1",
+			"2"
+		    ]
+		},
+		{
+		    "input": [
+			"2"
+		    ]
+		},
+		{
+		    "input": [
+			"3 5"
+		    ]
+		},
+		{
+		    "input": [
+			"4 100"
+		    ]
+		},
+		{
+		    "input": [
+			"5 20"
+		    ]
+		},
+		{
+		    "input": [
+			"5 3"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "rectangle",
+	    "program": "rectangle",
+	    "cases": [
+		{
+		    "input": [
+		    ]
+		},
+		{
+		    "input": [
+			"5"
+		    ]
+		},
+		{
+		    "input": [
+			"1 0"
+		    ]
+		},
+		{
+		    "input": [
+			"0 1"
+		    ]
+		},
+		{
+		    "input": [
+			"1 21"
+		    ]
+		},
+		{
+		    "input": [
+			"21 1"
+		    ]
+		},
+		{
+		    "input": [
+			"1 1"
+		    ]
+		},
+		{
+		    "input": [
+			"1 20"
+		    ]
+		},
+		{
+		    "input": [
+			"20 1"
+		    ]
+		},
+		{
+		    "input": [
+			"15 10"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "sum",
+	    "program": "sum",
+	    "cases": [
+		{
+		    "input": [
+		    ]
+		},
+		{
+		    "input": [
+			"1 3",
+			"5 6 8",
+			"h 9 20"
+		    ]
+		},
+		{
+		    "input": [
+			"-5",
+			"6"
+		    ]
+		},
+		{
+		    "input": [
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6"
+		    ]
+		},
+		{
+		    "input": [
+			"100 200 400"
+		    ]
+		},
+		{
+		    "input": [
+			"1.1 1.2 1.3"
+		    ]
+		},
+		{
+		    "input": [
+			"hello!"
+		    ]
+		},
+		{
+		    "input": [
+			"64280"
+		    ]
+		},
+		{
+		    "input": [
+			"1 2 3 ",
+			"4",
+			"5",
+			"6",
+			"9",
+			"",
+			"10",
+			"4",
+			"15",
+			"1 4"
+		    ]
+		},
+		{
+		    "input": [
+			"0 0 0 0",
+			"0 0 0",
+			"0 0",
+			"0"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "calc",
+	    "program": "calc",
+	    "cases": [
+		{
+		    "input": [
+		    ]
+		},
+		{
+		    "input": [
+			"x"
+		    ]
+		},
+		{
+		    "input": [
+			"cos x"
+		    ]
+		},
+		{
+		    "input": [
+			"cos sin"
+		    ]
+		},
+		{
+		    "input": [
+			"sin 0.79"
+		    ]
+		},
+		{
+		    "input": [
+			"cos 0.79"
+		    ]
+		},
+		{
+		    "input": [
+			"tan 0.79"
+		    ]
+		},
+		{
+		    "input": [
+			"sin 0.1"
+		    ]
+		},
+		{
+		    "input": [
+			"cos 0.1"
+		    ]
+		},
+		{
+		    "input": [
+			"tan 0.1"
+		    ]
+		},
+		{
+		    "input": [
+			"sine 0.1"
+		    ]
+		},
+		{
+		    "input": [
+			"cosine 0.1"
+		    ]
+		}
+	    ]
+	},
+
+	{
+	    "name": "lineno",
+	    "program": "lineno",
+	    "cases": [
+		{
+		    "input": [
+		    ]
+		},
+		{
+		    "input": [
+			""
+		    ]
+		},
+		{
+		    "input": [
+			"",
+			"",
+			""
+		    ]
+		},
+		{
+		    "input": [
+			"oneline"
+		    ]
+		},
+		{
+		    "input": [
+			"a",
+			"b",
+			"c"
+		    ]
+		},
+		{
+		    "input": [
+			"spaces on one line"
+		    ]
+		},
+		{
+		    "input": [
+			"some text",
+			"",
+			"and",
+			"",
+			"some blank"
+		    ]
+		},
+		{
+		    "input": [
+			"multiple lines",
+			"each with",
+			"a space"
+		    ]
+		},
+		{
+		    "input": [
+			"a",
+			"b c",
+			"d e f",
+			"g h i j",
+			"k l m n o"
+		    ]
+		},
+		{
+		    "input": [
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"10"
+		    ]
+		}
+	    ]
+	}
+    ]
+}
