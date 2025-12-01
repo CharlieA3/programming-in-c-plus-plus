@@ -1,0 +1,43 @@
+-- What control structure did you use in fizzbuzz.cpp and why?
+I used a for loop with if else statement with modulo to find what to print out. This seemed the easiest implementation.
+
+
+-- Why do you think it is a good idea to check that W and H are in range in rectangle.cpp?
+If they aren't in range and I end up not checking, I could try to loop from 0 to a negative number which doesn't make sense. My loop increments instead of decrements so I don't want any negative numbers.
+
+
+
+-- How did you check for end of input in sum.cpp and lineno.cpp?
+I didn't specifically check for end of input for sum.cpp because I could use a while loop that allowed the program to continue
+as long as a number or new line was entered. All the tests pass so I assume this is okay. For lineno.cpp I checked the IO stream bits
+for eof and bad to make sure there were no error related to the stream or if there was no end of file being read. I also read the 
+fail bit to make sure there was nothing wrong with the input.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+I used the LO4.cpp file from lecture as reference for IO bit checking.
+
+
+-- About how many hours did it take you to complete this assignment?
+2
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+I did not use any.
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?
+I wouldn't, I think this is a good assignment.

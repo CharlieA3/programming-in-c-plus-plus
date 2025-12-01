@@ -1,0 +1,78 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "make all",
+      "command": "make",
+      "args": [ "all" ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "type": "shell",
+      "label": "make clean",
+      "command": "make",
+      "args": [ "clean" ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "make calc",
+      "command": "make",
+      "args": [ "calc" ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "make fizzbuzz",
+      "command": "make",
+      "args": [ "fizzbuzz" ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "make lineno",
+      "command": "make",
+      "args": [ "lineno" ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "make rectangle",
+      "command": "make",
+      "args": [ "rectangle" ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "make sum",
+      "command": "make",
+      "args": [ "sum" ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "test",
+      "command": "python3",
+      "args": [ "test.py" ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "group": "test"
+    }
+  ]
+}
