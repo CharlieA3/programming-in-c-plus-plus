@@ -1,0 +1,38 @@
+-- How did you display two fixed digits of precision in median.cpp? What might be an alternative approach?
+I used the setprecision function as well as the fixed function before it. An alternate could be to use printf with the format function?
+
+
+-- What data types did you use in frame.cpp and why?
+I ised size_t so I could properly compare values. size_t is unsigned so I kept everything the same type when using the .size function so I could compare.
+
+
+-- How did you ignore additional input on lines in grid.cpp?
+
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+I used the IO lecture code for reference as well as the data types lecture.
+
+
+-- About how many hours did it take you to complete this assignment?
+2.5
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+I did not use any LLM tools
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+n/a
+
+
+-- (Optional) What was your favorite part of the assignment?
+learning
+
+
+-- (Optional) How would you improve the assignment?
