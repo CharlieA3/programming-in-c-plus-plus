@@ -1,0 +1,46 @@
+scratch
+valgrind_uninit
+valgrind_invalid
+valgrind_return
+gdb_zero
+gdb_bounds
+gdb_loop
+gdb_fact
+gdb_objects
+gcov_test
+gcov_evenodd
+callgrind_test
+callgrind_vector
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
