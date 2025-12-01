@@ -1,0 +1,56 @@
+PUT ANSWER HERE
+
+I came across three different errors from one sequence of actions. If I entered a buffer size 
+
+The first error I came across is the invalid write of size 4, then entered the string "hello". This
+gave me the errors "invalid write of size 1", "conditional jump or move depends on uninitialized value(s)",
+and "invalid read of size 1".
+
+For the "invalid write of size 1" error, this was the output:
+-----------------------------------------------
+==30052== Invalid write of size 1
+==30052==    at 0x49A2FFC: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+==30052==    by 0x10958E: read_buffer_contents(std::vector<char, std::allocator<char> >&) (valgrind_vector_as_string.cpp:36)
+==30052==    by 0x10970A: main (valgrind_vector_as_string.cpp:81)
+==30052==  Address 0x4e29904 is 0 bytes after a block of size 4 alloc'd
+==30052==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==30052==    by 0x10A3B6: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:137)
+==30052==    by 0x10A002: allocate (allocator.h:188)
+==30052==    by 0x10A002: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+==30052==    by 0x109F45: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (stl_vector.h:378)
+==30052==    by 0x109CBB: std::vector<char, std::allocator<char> >::_M_default_append(unsigned long) (vector.tcc:657)
+==30052==    by 0x1099E6: std::vector<char, std::allocator<char> >::resize(unsigned long) (stl_vector.h:1011)
+==30052==    by 0x1096FE: main (valgrind_vector_as_string.cpp:78)
+-----------------------------------------------
+This error was caused because I tried to enter more characters than the size of the buffer. Since I am trying to write to a memory location that 
+is out of bounds for the buffer because of the <= and ++ii. This will be accessing index 1 first, then end at the last index + 1 which is out of bounds.
+
+The output for the "conditional jump or move depends on uninitialized value(s)", this was the output:
+-----------------------------------------------
+==30052== Conditional jump or move depends on uninitialised value(s)
+==30052==    at 0x10961B: read_buffer_contents(std::vector<char, std::allocator<char> >&) (valgrind_vector_as_string.cpp:49)
+==30052==    by 0x10970A: main (valgrind_vector_as_string.cpp:81)
+-----------------------------------------------
+This error occurs because the "full" variable only gets set when "numchars" is less than the size of the buffer. Since the number of characters
+is equal or greater, full does not get set. Since it is not set, when we reach the if statement on line 49, the if nor the else can be executed.
+
+For the "invalid read of size 1" error, this is the output:
+-----------------------------------------------
+==33319== Invalid read of size 1
+==33319==    at 0x109662: print_buffer_contents(std::vector<char, std::allocator<char> > const&, unsigned long) (valgrind_vector_as_string.cpp:60)
+==33319==    by 0x109760: main (valgrind_vector_as_string.cpp:88)
+==33319==  Address 0x4e29904 is 0 bytes after a block of size 4 alloc'd
+==33319==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==33319==    by 0x10A3B6: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:137)
+==33319==    by 0x10A002: allocate (allocator.h:188)
+==33319==    by 0x10A002: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+==33319==    by 0x109F45: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (stl_vector.h:378)
+==33319==    by 0x109CBB: std::vector<char, std::allocator<char> >::_M_default_append(unsigned long) (vector.tcc:657)
+==33319==    by 0x1099E6: std::vector<char, std::allocator<char> >::resize(unsigned long) (stl_vector.h:1011)
+==33319==    by 0x1096FE: main (valgrind_vector_as_string.cpp:78)
+-----------------------------------------------
+This is also caused by the same thing that the first error is caused by. I will be reading from an out of bounds index because the loop increments through
+the wrong set of values. This is a classic off by one.
+
+
+I didn't come across any memory leaks and the HEAP report says that all heap blocks were freed and "no leaks possible"

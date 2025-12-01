@@ -1,0 +1,35 @@
+PUT ANSWER HERE
+
+VALUE 1: m2 = 505
+
+- placed a breakpoint at line 42 (mystery2() function call) 
+- Under the "watch" tab, I put in the variable "m2"
+- Since mystery2 is only activated when the input is not an integer, I used the continue operation to first get to the cin part
+- Entered "hello"
+- step into the mystery2 function
+- continue, which then reaches the exception
+- m2 is now displayed in the watch tab
+- record the value, stop the program
+
+
+VALUE 2: m1b = 34
+
+- set breakpoint at mysteryb1
+- added valued m1b to watch tab 
+- press play
+- continue operation, enter integer "4"
+- set breakpoint at line 22 (while (mystery1a(i)))
+- continue until I get to i=10
+- since I am sitting at the mystery1a function call, it displays the correct mb1 value that is being used becasue it was just assigned the value of z
+
+
+VALUE 3: i = 19
+
+- set breakpoint at mystery1b
+- add i to the watch tab
+- add m1b to the watch tab
+- set breakpoint at line 21 (i--, should stop before executing this line)
+- continue
+- enter "4"
+- step into
+- continue until I see m1b for the second time

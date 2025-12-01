@@ -1,0 +1,40 @@
+-- Which these tools might you use if your program is crashing on specific user inputs and why?
+I would use the vscode debugger because this will allow me to monitor variables at each step of the code. I would be able to see
+where things are going wrong and set breakpoints where I think things would fail.
+
+
+-- Which these tools might you use to determine how much of your code is tested by unit tests and why?
+I would use gcov because it tells you the percentage of lines executed, so if you use it with a test file it will tell you everything
+your tests cover.
+
+
+-- What is a change you might make to address one of the issues in valgrind_vector_as_string.cpp?
+I would change the loop indexing to not go out of bounds. It is a simple change that would just make things a lot easier.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+I used lecture code and slides to figure out how to use these debugger tools.
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+n/a
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the tool wrong in any place? What did I have to change from its output?
+
+
+
+-- About how many hours did it take you to complete this assignment?
+2.5
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

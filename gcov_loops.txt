@@ -1,0 +1,10 @@
+PUT ANSWER HERE
+
+LINE 1: 100
+
+LINE 2: 46444
+
+LINE 3: 382
+
+
+It tells me the lines in the gcov_loops.cpp.gcov file. This seems too easy.

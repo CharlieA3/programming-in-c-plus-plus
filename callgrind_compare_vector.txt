@@ -1,0 +1,27 @@
+
+I ran the code calling both functions with the number of iterations given to me for the loop. Vector_at takes
+990,000,000 instructions to access an item in a vector, and vector_brackets takes 330,000,000. This makes sense 
+because vector at has bound checking which takes extra instructions. I assume it is one for each end of the vector. 
+This is a safety vs speed tradeoff.
+
+
+Here is my output:
+--------------------------------------------------------------------------------
+1,502,423,548 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                      file:function
+--------------------------------------------------------------------------------
+1,502,423,548 (100.0%)  ???:0x0000000000020290 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+1,500,150,733 (99.85%)  ???:(below main) [/home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector]
+1,500,150,721 (99.85%)  ./csu/../csu/libc-start.c:__libc_start_main@@GLIBC_2.34 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,500,149,373 (99.85%)  ./csu/../sysdeps/nptl/libc_start_call_main.h:(below main) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,500,003,438 (99.84%)  /home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector.cpp:main
+1,500,003,438 (99.84%)  callgrind_compare_vector.cpp:main [/home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector]
+  990,000,000 (65.89%)  callgrind_compare_vector.cpp:run_vector_at(std::vector<int, std::allocator<int> >&) [/home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector]
+  810,000,000 (53.91%)  /usr/include/c++/12/bits/stl_vector.h:std::vector<int, std::allocator<int> >::at(unsigned long) [/home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector]
+  380,000,000 (25.29%)  /usr/include/c++/12/bits/stl_vector.h:std::vector<int, std::allocator<int> >::_M_range_check(unsigned long) const [/home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector]
+  330,000,000 (21.96%)  callgrind_compare_vector.cpp:run_vector_brackets(std::vector<int, std::allocator<int> >&) [/home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector]
+  300,000,000 (19.97%)  /usr/include/c++/12/bits/stl_vector.h:std::vector<int, std::allocator<int> >::operator[](unsigned long) [/home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector]
+  160,000,064 (10.65%)  /usr/include/c++/12/bits/stl_vector.h:std::vector<int, std::allocator<int> >::size() const [/home/charlie/programming-in-cpp/assignments/asgn03-tools-why-every-time/callgrind_compare_vector]
+    2,174,215 ( 0.14%)  ./elf/./elf/rtld.c:_dl_start [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
