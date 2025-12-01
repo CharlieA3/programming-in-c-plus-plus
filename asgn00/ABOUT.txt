@@ -1,0 +1,39 @@
+-- What was the issue in circle.cpp and how did you fix it?
+The issue was that tests were failing because answers were off because of rounding. I fixed this by changing the precision to 3 instead of 2.
+
+
+-- What was the issue in hello.cpp and how did you fix it?
+The issue was that the hello program was not printing out any name. This fix was to add the name variable into the cout chain instead of the "".
+
+
+-- What was the issue in numbername.cpp and how did you fix it?
+The issue was program failure when entering the number 3. The fix was to add 3 to the switch case. 
+
+
+============================================================ 
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+I didn't use any external resources.
+
+
+-- About how many hours did it take you to complete this assignment?
+Less than 1.
+
+
+-- Did you use any LLM tools? If so, what tool, and what prompts did you provide?
+Did not use any LLM tools.
+
+
+-- If you used an LLM tool, write a sentence or two reflecting on your use of the tool. Some prompts that might help you think:
+   -- Did the tool aid in my learning, or was it just a shortcut around challenges?
+   -- With what I've learned, could I complete a similar assignment without the tool?
+   -- Was the LLM wrong in any place? What did I have to change from its output?
+
+
+
+-- (Optional) What was your favorite part of the assignment?
+I like that we are getting exposed through debugging because I know C and C++ happend to be a lot of debugging.
+
+
+-- (Optional) How would you improve the assignment?
+I wouldn't.
