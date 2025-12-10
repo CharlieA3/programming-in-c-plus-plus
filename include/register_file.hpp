@@ -2,6 +2,8 @@
 #define REGISTER_FILE
 
 #include <cstdint>
+#include <stdexcept>
+
 #include "cpu_constants.hpp"
 
 struct Register_File_Output
@@ -14,12 +16,11 @@ struct Register_File_Output
 class Register_File
 {
 public:
-    void display_IO();
-
-    Register_File_Output write_register(uint8_t readaddr1, uint8_t readaddr2, uint8_t writeaddr, uint16_t writedata, unsigned char reg[NUM_REGISTERS][CPU_WIDTH_BYTES]);
+    Register_File_Output read_two(uint8_t readaddr1, uint8_t readaddr2);
+    void write(uint8_t writeaddr, uint16_t writedata);
+    uint16_t read(uint8_t addr);
 
 private:
-    // this should be a 8 x 2 bytes piece of memory to hold the current values for the 8 registers
     unsigned char reg[NUM_REGISTERS][CPU_WIDTH_BYTES];
 };
 

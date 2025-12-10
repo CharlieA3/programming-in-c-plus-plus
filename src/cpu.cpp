@@ -1,5 +1,9 @@
 #include "cpu.hpp"
 
+void CPU::clock()
+{
+}
+
 // this logic was used from my lab class where we made a single cycle processor, i just had to type the while thing out
 // lets pray I didn't mistype a bit
 RISCV16_Mapped RISCV16_Mapped::map_inst(uint16_t instruction)
@@ -341,4 +345,21 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
     }
 
     return result;
+}
+
+void RISCV16_Decoded::display_control_signals()
+{
+    printf("reg_write: %d\n", reg_write);
+    printf("reg_dst: %d\n", reg_dst);
+    printf("alu_src_1: %d\n", alu_src_1);
+    printf("alu_src_2: %d\n", alu_src_2);
+    printf("mem_write: %d\n", mem_write);
+    printf("mem_to_reg: %d\n", mem_to_reg);
+    printf("reg_src: %d\n", reg_src);
+}
+
+void RISCV16_Decoded::display_op_and_inst()
+{
+    printf("decoder opcode: %hhu\n", opcode);
+    printf("immeidate instruction: %hu\n", imm_instruction);
 }

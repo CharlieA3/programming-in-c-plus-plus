@@ -42,6 +42,8 @@ struct RISCV16_Decoded
     // opcode [3:0] - tells the cpu what operation to perform
     uint8_t opcode;
 
+    void display_control_signals();
+    void display_op_and_inst();
     // takes some of the mapped values and outputs all control signals dependant on the opcode
     static RISCV16_Decoded decode(uint16_t instruction);
 };
@@ -58,10 +60,9 @@ public:
     CPU()
     {
         inst_mem_ptr = std::make_unique<Instruction_Memory>();
-        mapper_ptr = std::make_unique<RISCV16_Mapped>();
-        inst_dec_ptr = std::make_unique<RISCV16_Decoded>();
         reg_file_ptr = std::make_unique<Register_File>();
         alu_ptr = std::make_unique<ALU<RISCV16S>>();
+        data_mem_ptr = std::make_unique<Data_Memory>();
     }
 
     // performs next clock cycle - increments PC or branches to next instruction
@@ -70,8 +71,6 @@ public:
 private:
     // modular-ish cpu components
     std::unique_ptr<Instruction_Memory> inst_mem_ptr;
-    std::unique_ptr<RISCV16_Mapped> mapper_ptr;
-    std::unique_ptr<RISCV16_Decoded> inst_dec_ptr;
     std::unique_ptr<Register_File> reg_file_ptr;
     std::unique_ptr<ALU<RISCV16S>> alu_ptr;
     std::unique_ptr<Data_Memory> data_mem_ptr;
