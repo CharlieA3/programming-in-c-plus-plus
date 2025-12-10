@@ -7,6 +7,7 @@
 #include "alu.hpp"
 #include "memory.hpp"
 #include "register_file.hpp"
+#include "cpu_constants.hpp"
 
 // values used by instructions
 struct RISCV16_Mapped
@@ -54,17 +55,26 @@ T multiplexer(T input1, T input2, bool control)
 class CPU
 {
 public:
+    CPU()
+    {
+        inst_mem_ptr = std::make_unique<Instruction_Memory>();
+        mapper_ptr = std::make_unique<RISCV16_Mapped>();
+        inst_dec_ptr = std::make_unique<RISCV16_Decoded>();
+        reg_file_ptr = std::make_unique<Register_File>();
+        alu_ptr = std::make_unique<ALU<RISCV16S>>();
+    }
+
     // performs next clock cycle - increments PC or branches to next instruction
     void clock();
 
 private:
     // modular-ish cpu components
-    std::unique_ptr<Instruction_Memory> instruction_memory;
-    std::unique_ptr<RISCV16_Mapped> mapper;
-    std::unique_ptr<RISCV16_Decoded> instruction_decoder;
-    std::unique_ptr<Register_File> register_file;
-    std::unique_ptr<ALU> alu;
-    std::unique_ptr<Data_Memory> data_memory;
+    std::unique_ptr<Instruction_Memory> inst_mem_ptr;
+    std::unique_ptr<RISCV16_Mapped> mapper_ptr;
+    std::unique_ptr<RISCV16_Decoded> inst_dec_ptr;
+    std::unique_ptr<Register_File> reg_file_ptr;
+    std::unique_ptr<ALU<RISCV16S>> alu_ptr;
+    std::unique_ptr<Data_Memory> data_mem_ptr;
     // can take in any inputs (template function), returning the appropriate one depending on the opcode which allows
     // std::unique_ptr<Multiplexer> mux;
 
