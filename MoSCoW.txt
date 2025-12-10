@@ -1,18 +1,24 @@
 * Summary
 
-(Replace this text with a short description of what your completed project should be here.)
-
+I made a 16-bit single cycle processor using a condensed RISCV instruction set. It has only some of the functionality of an actual
+CPU, but it mimics what I completed in my digital design lab course this semester.
 
 
 * Progress
 
 Must
-[ ] (Replace this text with a feature and check the [x] when it is done)
-[ ]
-[ ]
+[x] instruction memory
+[x] mapper
+[x] decoder
+[ ] register file
+[x] alu
+[x] data memory
+[ ] cpu clock cycle
+[ ] main function to run the program
+[ ] 
 
 Should
-[ ]
+[ ] make everything modular
 [ ]
 
 Could
@@ -20,5 +26,5 @@ Could
 [ ]
 
 Won't
-[ ]
+[ ] make everything modular
 [ ]
