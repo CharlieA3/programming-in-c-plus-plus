@@ -49,11 +49,11 @@ else ifeq ($(shell sh -c 'uname'),Darwin)
 		DOXYGEN=doxygen
 	endif
 else
-	ifeq (, $(shell which sdl2-config))
-	else
-		CXXFLAGS_BASE:=$(CXXFLAGS_BASE) $(shell sh -c 'sdl2-config --cflags')
-		LDFLAGS_BASE:=$(LDFLAGS_BASE) $(shell sh -c 'sdl2-config --libs') -lSDL2_gfx -lSDL2_image -lSDL2_mixer -lSDL2_net -lSDL2_ttf
-	endif
+# 	ifeq (, $(shell which sdl2-config))
+# 	else
+# 		CXXFLAGS_BASE:=$(CXXFLAGS_BASE) $(shell sh -c 'sdl2-config --cflags')
+# 		LDFLAGS_BASE:=$(LDFLAGS_BASE) $(shell sh -c 'sdl2-config --libs') -lSDL2_gfx -lSDL2_image -lSDL2_mixer -lSDL2_net -lSDL2_ttf
+# 	endif
 	DOXYGEN=doxygen
 endif
 
