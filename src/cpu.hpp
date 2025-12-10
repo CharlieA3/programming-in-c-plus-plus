@@ -58,8 +58,8 @@ public:
     void clock();
 
 private:
-    // modular cpu components
-    std::unique_ptr<Instruction_Memory> Instruction_Memory;
+    // modular-ish cpu components
+    std::unique_ptr<Instruction_Memory> instruction_memory;
     std::unique_ptr<RISCV16_Mapped> mapper;
     std::unique_ptr<RISCV16_Decoded> instruction_decoder;
     std::unique_ptr<Register_File> register_file;
