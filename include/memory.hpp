@@ -49,6 +49,11 @@ public:
     void store_word(int address, RISCV16 value);
     void load_from_file_into_queue(std::string filename);
 
+    size_t queue_size() const
+    {
+        return instruction_q.size();
+    }
+
 private:
     std::queue<RISCV16> instruction_q;
 };

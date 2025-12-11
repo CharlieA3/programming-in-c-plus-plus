@@ -70,6 +70,21 @@ public:
     // performs next clock cycle - increments PC or branches to next instruction
     void clock();
 
+    void loadProgram(std::string filename)
+    {
+        inst_mem_ptr->load_from_file_into_queue(filename);
+    }
+
+    bool hasInstructions()
+    {
+        return inst_mem_ptr->queue_size() > 0;
+    }
+
+    size_t getInstructionCount()
+    {
+        return inst_mem_ptr->queue_size();
+    }
+
 private:
     // modular-ish cpu components
     std::unique_ptr<Instruction_Memory> inst_mem_ptr;

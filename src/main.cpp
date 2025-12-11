@@ -8,15 +8,47 @@
 
 int main(int argc, char **argv)
 {
+  try
+  {
+    CPU cpu;
 
-  // future design - parameters get passed into the MCU so every components can be initialized in a modular way
-  CPU cpu();
+    if (argc < 2)
+    {
+      std::cerr << "Missing instruction file" << std::endl;
+      return 1;
+    }
 
-  // create instruction file here, load file into queue - using a queue for future user interaction for entering instructions
+    std::string filename = argv[1];
 
-  
-  
+    cpu.loadProgram(filename);
+    std::cout << "instructions loaded: " << cpu.getInstructionCount() << std::endl;
+
+    while (cpu.hasInstructions())
+    {
+      cpu.clock();
+    }
+
+    std::cout << "done" << std::endl;
+  }
+  catch (const std::out_of_range &e)
+  {
+    std::cerr << "memory Error: " << e.what() << std::endl;
+    return 1;
+  }
+  catch (const std::runtime_error &e)
+  {
+    std::cerr << "runtime Error: " << e.what() << std::endl;
+    return 1;
+  }
+  catch (const std::exception &e)
+  {
+    std::cerr << "error: " << e.what() << std::endl;
+    return 1;
+  }
+
   return 0;
+}
+0;
 }
 
 /* Design
