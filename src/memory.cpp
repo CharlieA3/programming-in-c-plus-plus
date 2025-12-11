@@ -4,6 +4,19 @@
 
 const char *errmsg_open_file = "Cannot open file";
 
+RISCV16 Instruction_Memory::pop_instruction()
+{
+    if (instruction_q.empty())
+    {
+        throw std::runtime_error("No more instructions");
+    }
+    // this should copy do I can now pop
+    RISCV16 instruction = instruction_q.front();
+    instruction_q.pop();
+
+    return instruction;
+}
+
 RISCV16 Instruction_Memory::read_word(int address)
 {
     if (address < 0 || address >= depth)

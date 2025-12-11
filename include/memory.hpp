@@ -43,13 +43,14 @@ class Instruction_Memory : public Memory
 {
 public:
     Instruction_Memory() : Memory(INSTR_WORDS_HELD) {}
+    RISCV16 pop_instruction();
     // returns 16 bit value from the given address
     RISCV16 read_word(int address);
     void store_word(int address, RISCV16 value);
     void load_from_file_into_queue(std::string filename);
 
 private:
-    std::queue<std::uint16_t> instruction_q;
+    std::queue<RISCV16> instruction_q;
 };
 
 class Data_Memory : public Memory
