@@ -95,7 +95,7 @@ private:
     // std::unique_ptr<Multiplexer> mux;
 
     // tracks which instruction the cpu is about to execute
-    static int program_counter;
+    int program_counter;
 
     // instructions - user instruction is what the program counter is tracking, immediate instruction is a value used within instructions depending on opcode
     RISCV16 user_instruction;

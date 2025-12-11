@@ -15,7 +15,7 @@ Register_File_Output Register_File::read_two(uint8_t readaddr1, uint8_t readaddr
     return output;
 }
 
-void Register_File::write(uint8_t writeaddr, uint16_t writedata)
+void Register_File::write(uint8_t writeaddr, RISCV16S writedata)
 {
     if (writeaddr >= NUM_REGISTERS)
     {

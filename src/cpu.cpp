@@ -4,7 +4,15 @@ void CPU::clock()
 {
     user_instruction = inst_mem_ptr->pop_instruction();
 
+    std::cout << "\nPC: " << program_counter
+              << " | Instr: 0x" << std::hex << std::setw(4) << std::setfill('0') << user_instruction << std::dec << std::endl;
+
     RISCV16_Mapped mapped = RISCV16_Mapped::map_inst(user_instruction);
+
+    std::cout << "  Opcode: 0x" << std::hex << std::setw(4) << std::setfill('0') << (int)mapped.opcode
+              << " | rs1: " << (int)mapped.rs1
+              << " | rs2: " << (int)mapped.rs2
+              << " | rd: " << (int)mapped.rd << std::dec << std::endl;
 
     // the mapper is included in the decoder as well
     RISCV16_Decoded decoder = RISCV16_Decoded::decode(user_instruction);
@@ -21,7 +29,11 @@ void CPU::clock()
 
     ALU_Result alu_result = alu_ptr->execute(alu_input1, alu_input2, decoder.opcode);
 
-    RISCV16S data_mem_out = static_cast<RISCV16S>(data_mem_ptr->read_word((int)alu_result.output));
+    RISCV16S data_mem_out = 0;
+    if (decoder.mem_to_reg)
+    {
+        data_mem_out = static_cast<RISCV16S>(data_mem_ptr->read_word((int)alu_result.output));
+    }
     if (decoder.mem_write)
     {
         data_mem_ptr->store_word(alu_result.output, reg_file_out.data2);
@@ -41,14 +53,25 @@ void CPU::clock()
         printf("Overflow occured on instruction %d\n", program_counter);
     }
 
-    if (alu_result.take_branch)
-    {
-        program_counter += static_cast<int>(mapped.offset);
-    }
-    else
-    {
-        program_counter++;
-    }
+    // if (alu_result.take_branch)
+    // {
+    //     int16_t signed_offset = mapped.offset;
+
+    //     // checking the signed bit
+    //     if (mapped.offset & 0x100)
+    //     {
+    //         // sign extend
+    //         signed_offset |= 0xFE00;
+    //     }
+
+    //     program_counter += signed_offset;
+    // }
+    // else
+    // {
+    program_counter++;
+    // }
+
+    reg_file_ptr->display();
 }
 
 // this logic was used from my lab class where we made a single cycle processor, i just had to type the while thing out
@@ -332,7 +355,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(RISCV16 instruction)
         result.imm_instruction = mapped.immediate;
         result.alu_src_1 = false;
         result.alu_src_2 = false;
-        result.opcode = 0x04;
+        result.opcode = 0x08;
         result.mem_write = false;
         result.mem_to_reg = false;
         result.reg_src = true;
