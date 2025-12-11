@@ -1,0 +1,30 @@
+* Summary
+
+I made a 16-bit single cycle processor using a condensed RISCV instruction set. It has only some of the functionality of an actual
+CPU, but it mimics what I completed in my digital design lab course this semester.
+
+
+* Progress
+
+Must
+[x] instruction memory
+[x] mapper
+[x] decoder
+[x] register file
+[x] alu template class
+[x] data memory
+[x] cpu clock cycle
+[x] main function to run the program
+[x] multiplexer template function
+
+Should
+[ ] make everything modular
+[ ] implement branching
+
+Could
+[ ]
+[ ]
+
+Won't
+[ ] make everything modular
+[ ]
