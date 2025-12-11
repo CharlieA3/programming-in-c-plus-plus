@@ -57,6 +57,7 @@ class Data_Memory : public Memory
 {
 public:
     Data_Memory() : Memory(DATA_WORDS_HELD) {}
+    // the return value of this will need to be casted
     RISCV16 read_word(int address);
     void store_word(int address, RISCV16 value);
 };

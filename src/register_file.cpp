@@ -8,6 +8,7 @@ Register_File_Output Register_File::read_two(uint8_t readaddr1, uint8_t readaddr
     }
 
     Register_File_Output output;
+    // extend to 16 bit
     output.data1 = reg[readaddr1][0] | (reg[readaddr1][1] << 8);
     output.data2 = reg[readaddr2][0] | (reg[readaddr2][1] << 8);
 

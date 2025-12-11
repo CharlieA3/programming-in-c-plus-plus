@@ -92,7 +92,7 @@ void Instruction_Memory::load_from_file_into_queue(std::string filename)
     }
 }
 
-RISCV16 Data_Memory::read_word(int address)
+RISCV16S Data_Memory::read_word(int address)
 {
     if (address < 0 || address >= depth)
     {
@@ -101,7 +101,7 @@ RISCV16 Data_Memory::read_word(int address)
     return memory[address];
 }
 
-void Data_Memory::store_word(int address, RISCV16 value)
+void Data_Memory::store_word(int address, RISCV16S value)
 {
     if (address < 0 || address >= depth)
     {

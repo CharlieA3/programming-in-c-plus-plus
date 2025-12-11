@@ -2,11 +2,58 @@
 
 void CPU::clock()
 {
+    user_instruction = inst_mem_ptr->pop_instruction();
+
+    RISCV16_Mapped mapped = RISCV16_Mapped::map_inst(user_instruction);
+
+    // the mapper is included in the decoder as well
+    RISCV16_Decoded decoder = RISCV16_Decoded::decode(user_instruction);
+
+    uint8_t readaddr1 = multiplexer(mapped.rs1, mapped.rd, decoder.reg_src);
+    uint8_t readaddr2 = mapped.rs2;
+
+    uint8_t write_addr = multiplexer(mapped.rs2, mapped.rd, decoder.reg_dst);
+
+    Register_File_Output reg_file_out = reg_file_ptr->read_two(readaddr1, readaddr2);
+
+    RISCV16S alu_input1 = multiplexer(reg_file_out.data1, static_cast<RISCV16S>(0), decoder.alu_src_1);
+    RISCV16S alu_input2 = multiplexer(reg_file_out.data2, static_cast<RISCV16S>(decoder.imm_instruction), decoder.alu_src_2);
+
+    ALU_Result alu_result = alu_ptr->execute(alu_input1, alu_input2, decoder.opcode);
+
+    RISCV16S data_mem_out = static_cast<RISCV16S>(data_mem_ptr->read_word((int)alu_result.output));
+    if (decoder.mem_write)
+    {
+        data_mem_ptr->store_word(alu_result.output, reg_file_out.data2);
+    }
+
+    // determines if we are writing back to a register from memory
+    RISCV16S write_data = multiplexer(alu_result.output, data_mem_out, decoder.mem_to_reg);
+
+    if (decoder.reg_write)
+    {
+        reg_file_ptr->write(write_addr, write_data);
+    }
+
+    if (alu_result.overflow)
+    {
+        // TODO: do I need to do anything else?
+        printf("Overflow occured on instruction %d\n", program_counter);
+    }
+
+    if (alu_result.take_branch)
+    {
+        program_counter += static_cast<int>(mapped.offset);
+    }
+    else
+    {
+        program_counter++;
+    }
 }
 
 // this logic was used from my lab class where we made a single cycle processor, i just had to type the while thing out
 // lets pray I didn't mistype a bit
-RISCV16_Mapped RISCV16_Mapped::map_inst(uint16_t instruction)
+RISCV16_Mapped RISCV16_Mapped::map_inst(RISCV16 instruction)
 {
     RISCV16_Mapped result;
 
@@ -170,7 +217,7 @@ RISCV16_Mapped RISCV16_Mapped::map_inst(uint16_t instruction)
     return result;
 }
 
-RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
+RISCV16_Decoded RISCV16_Decoded::decode(RISCV16 instruction)
 {
     RISCV16_Decoded result;
 
@@ -188,6 +235,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
 
     switch (mapped.opcode)
     {
+    // load word
     case 0x00:
         result.reg_write = true;
         result.reg_dst = true;
@@ -200,6 +248,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = false;
         break;
 
+    // store word
     case 0x01:
         result.reg_write = false;
         result.reg_dst = false;
@@ -212,6 +261,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = false;
         break;
 
+    // add
     case 0x02:
         result.reg_write = true;
         result.reg_dst = true;
@@ -224,6 +274,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = true;
         break;
 
+    // addi
     case 0x03:
         result.reg_write = true;
         result.reg_dst = true;
@@ -235,6 +286,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = true;
         break;
 
+    // and
     case 0x04:
         result.reg_write = true;
         result.reg_dst = true;
@@ -247,6 +299,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = true;
         break;
 
+    // andi
     case 0x05:
         result.reg_write = true;
         result.reg_dst = true;
@@ -259,6 +312,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = true;
         break;
 
+    // or
     case 0x06:
         result.reg_write = true;
         result.reg_dst = true;
@@ -271,6 +325,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = true;
         break;
 
+    // xor
     case 0x07:
         result.reg_write = true;
         result.reg_dst = true;
@@ -283,6 +338,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = true;
         break;
 
+    // srai
     case 0x08:
         result.reg_write = true;
         result.reg_dst = true;
@@ -295,6 +351,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = true;
         break;
 
+    // slli
     case 0x09:
         result.reg_write = true;
         result.reg_dst = true;
@@ -307,6 +364,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = true;
         break;
 
+    // beqz
     case 0x0A:
         result.reg_write = false;
         result.reg_dst = false;
@@ -319,6 +377,7 @@ RISCV16_Decoded RISCV16_Decoded::decode(uint16_t instruction)
         result.reg_src = false;
         break;
 
+    // bneqz
     case 0x0B:
         result.reg_write = false;
         result.reg_dst = false;

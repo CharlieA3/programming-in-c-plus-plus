@@ -8,8 +8,8 @@
 
 struct Register_File_Output
 {
-    std::uint16_t data1;
-    std::uint16_t data2;
+    RISCV16S data1;
+    RISCV16S data2;
 };
 
 // using 2D array to represent registers (concept A)
@@ -17,7 +17,7 @@ class Register_File
 {
 public:
     Register_File_Output read_two(uint8_t readaddr1, uint8_t readaddr2);
-    void write(uint8_t writeaddr, uint16_t writedata);
+    void write(uint8_t writeaddr, RISCV16S writedata);
     uint16_t read(uint8_t addr);
 
 private:
