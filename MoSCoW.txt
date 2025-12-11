@@ -10,16 +10,16 @@ Must
 [x] instruction memory
 [x] mapper
 [x] decoder
-[ ] register file
+[x] register file
 [x] alu template class
 [x] data memory
-[ ] cpu clock cycle
-[ ] main function to run the program
+[x] cpu clock cycle
+[x] main function to run the program
 [x] multiplexer template function
 
 Should
 [ ] make everything modular
-[ ]
+[ ] implement branching
 
 Could
 [ ]
